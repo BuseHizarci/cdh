@@ -17,10 +17,32 @@
     font-size: 16px;
   }
 
+  #btn-accordion>svg {
+    transition: all .2s;
+    fill: red;
+}
+
   #btn-accordion:hover {
     cursor: pointer;
     transition: all .2s;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.09);
+}
+
+#btn-accordion:hover>svg {
+  transition: all .2s;
+  fill: #0d2d40;
+}
+
+#btn-accordion.active {
+  transition: all 0s;
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+  border-bottom: 1px solid #c1c1c1;
+  box-shadow: unset
+}
+#btn-accordion.active>svg  {
+  fill: #0d2d40;
+  transform: rotate(180deg);
 }
 
   #panel {
